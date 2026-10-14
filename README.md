@@ -42,11 +42,11 @@ Optional still images shown before the video starts playing:
 
 ## 2. It's already on GitHub
 
-The repo is live at **https://github.com/TCVHN5Vn/portfolio**, and the site is
+The repo is live at **https://github.com/mariemkbaier/portfolio**, and the site is
 published at:
 
 ```
-https://TCVHN5Vn.github.io/portfolio/
+https://mariemkbaier.github.io/portfolio/
 ```
 
 If the link 404s, GitHub Pages just needs turning on once: repo **Settings** →
@@ -62,7 +62,7 @@ To edit text, open `index.html`, click the pencil icon, edit, commit.
 From the command line:
 
 ```bash
-git clone https://github.com/TCVHN5Vn/portfolio.git
+git clone https://github.com/mariemkbaier/portfolio.git
 cd portfolio
 # ...make your changes, drop files into assets/...
 git add .
