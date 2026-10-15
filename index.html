@@ -488,8 +488,8 @@ footer{background:var(--ink);color:#6E7587;border-top:1px solid #2A2F3B}
 <section id="work">
   <div class="wrap">
     <p class="eyebrow">Selected work</p>
-    <h2>Three projects, in motion.</h2>
-    <p class="lede" style="margin-top:20px">All three are running systems, not slide decks.</p>
+    <h2>Five projects, in motion.</h2>
+    <p class="lede" style="margin-top:20px">All five are running systems, not slide decks.</p>
 
     <div style="margin-top:52px">
 
@@ -553,11 +553,83 @@ footer{background:var(--ink);color:#6E7587;border-top:1px solid #2A2F3B}
             <div class="tags">
               <span class="tag">PyTorch</span><span class="tag">DIGA</span><span class="tag">PETAL</span><span class="tag">PeTTA</span><span class="tag">Evaluation design</span>
             </div>
+            <p style="margin:18px 0 0">
+              <a class="demo-more" href="https://github.com/mariemkbaier/TTA-Test-Time-Adaptation" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+            </p>
           </div>
         </div>
       </article>
 
       <!-- DEMO 3 -->
+      <article class="demo rv">
+        <div class="demo-grid">
+          <figure class="media" data-media="assets/robotics-demo.mp4" data-type="video" data-poster="assets/robotics-poster.jpg" style="margin:0"></figure>
+          <div>
+            <div class="demo-kicker">Systems &middot; Simulation</div>
+            <h3>Vision-guided pick-and-place, end to end</h3>
+            <p>
+              A camera looks at a table and a 6-DoF arm picks a named object and drops
+              it in a bin. Nothing in the loop is privileged: the robot finds the
+              camera by calibrating, finds the object by looking, and has to know
+              when not to trust what it sees.
+            </p>
+            <p>
+              The hard part is not any single stage. An error in hand-eye calibration,
+              in 6D pose, or in the solver is indistinguishable from the others by the
+              time it reaches the gripper &mdash; so the eval harness exists to attribute
+              error back to the stage that caused it.
+            </p>
+            <ul class="bullets">
+              <li>Hand-eye calibration solving AX&nbsp;=&nbsp;XB, pose from PnP with ambiguity handling</li>
+              <li>Inverse kinematics via damped least squares</li>
+              <li>Twelve bugs found in development, each now a regression test</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">ArUco</span><span class="tag">Kinematics</span><span class="tag">Calibration</span>
+            </div>
+            <p style="margin:18px 0 0">
+              <a class="demo-more" href="https://github.com/mariemkbaier/vision-guided-pick-and-place" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO 4 -->
+      <article class="demo rv">
+        <div class="demo-grid">
+          <figure class="media" data-media="assets/meeting-assistant.jpg" data-type="image" style="margin:0"></figure>
+          <div>
+            <div class="demo-kicker">Prototype &middot; On-device</div>
+            <h3>A meeting assistant that never phones home</h3>
+            <p>
+              Streaming speech recognition, retrieval across company documents and past
+              transcripts, and spoken Q&amp;A answered by a locally hosted model. No
+              external API calls, no per-token cost, and no audio leaving the machine.
+            </p>
+            <p>
+              Two changes decided whether it was usable. Replacing fixed-interval audio
+              chunking with voice-activity segmentation lifted mean transcription
+              confidence from &minus;0.61 to &minus;0.43 on identical audio. And requiring
+              every extracted action item to quote the transcript verbatim &mdash; verified
+              programmatically before it is stored &mdash; took fabricated items from 33 to
+              zero on a control meeting.
+            </p>
+            <ul class="bullets">
+              <li>Answers grounded in retrieved passages, with the sources shown</li>
+              <li>Retrieval relevance floor: the model is never called without context</li>
+              <li>Runs entirely on-device &mdash; faster-whisper, FAISS, Ollama</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">faster-whisper</span><span class="tag">Silero VAD</span><span class="tag">FAISS</span><span class="tag">Ollama</span><span class="tag">FastAPI</span>
+            </div>
+            <p style="margin:18px 0 0">
+              <a class="demo-more" href="https://github.com/mariemkbaier/meeting-assistant" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO 5 -->
       <article class="demo rv">
         <div class="demo-grid">
           <figure class="media" data-media="assets/llm-demo.mp4" data-type="video" data-poster="assets/llm-poster.jpg" style="margin:0"></figure>
@@ -685,6 +757,9 @@ footer{background:var(--ink);color:#6E7587;border-top:1px solid #2A2F3B}
       </a>
       <a class="clink" href="https://linkedin.com/in/kbaier-mariem" target="_blank" rel="noopener">
         <div class="k">LinkedIn</div><div class="v">linkedin.com/in/kbaier-mariem</div>
+      </a>
+      <a class="clink" href="https://github.com/mariemkbaier" target="_blank" rel="noopener">
+        <div class="k">GitHub</div><div class="v">github.com/mariemkbaier</div>
       </a>
       <a class="clink" href="tel:+21692612816">
         <div class="k">Phone</div><div class="v">+216 92 612 816</div>
